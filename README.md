@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @Nyadej aka Naomi 😎
-- 👀 I’m interested in gyming, trying to get 10k steps in daily and self development.
+- 👀 I’m interested in gyming/weight training, trying to get 10k steps in daily and self development.
 - 🌱 I’m currently learning java + javascript.
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
