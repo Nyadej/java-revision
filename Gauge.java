@@ -1,3 +1,13 @@
+/*
+Create the class Gauge. 
+The gauge has the instance variable private int value, a constructor without parameters (sets the initial value of the meter variable to 0), and also the following four methods:
+
+- Method public void increase() grows the value instance variable's value by one. It does not grow the value beyond five.
+- Method public void decrease() decreases the value instance variable's value by one. It does not decrease the value to negative numbers.
+- Method public int value() returns the value variable's value.
+- Method public boolean full() returns true if the instance variable value has the value five. Otherwise, it returns false.
+ */
+
 public class Gauge { 
     private int value;
 
@@ -36,7 +46,7 @@ public class Gauge {
     }
 
     This is more concise and leverages the fact that the expression this.value == 5 already evaluates to a boolean value (true or false)
-     */
+    
 
      public class main {
         public static void main(String[] args) {
@@ -51,4 +61,4 @@ public class Gauge {
             g.decrease();
             System.out.println("Not full! Value: " + g.value());
         }
-     }
+     } */
