@@ -43,6 +43,7 @@ public class Whistle {
     public void sound() {
         System.out.println(this.sound);
     }
+}
 
     public static void main(String[] args) {
         // Creating instances of Whistle with different sounds
@@ -72,7 +73,7 @@ public class Door {
     public void knock() {
         System.out.println("Who's there?");
     }
-
+}
     // main method to test the door class
     public static void main(String[] args) {
         Door alexander = new Door();
@@ -107,7 +108,7 @@ public class Product {
     public void printProduct() {
         System.out.println(this.name + ", price " + this.price + ", " + this.quantity + " pcs");
     }
-
+}
     // main method to test the product class
     public static void main(String[] args) {
         Product banana = new Product("Banana", 1.1, 13);
@@ -131,10 +132,14 @@ public class DecreasingCounter {
     public void decrement() {
         // write the method implementation here
         // the aim is to decrement the value of the counter by one
+        /*Implement the decrement() in such a way that the counter's value never becomes negative. 
+        This means that if the value of the counter is 0, it cannot be decremented. 
+        A conditional statement is useful here. */
         if (this.value > 0) {
             this.value = this.value - 1;
         }
     }
+}
 
     public class MainProgram {
         public static void main(String[] args) {
@@ -148,5 +153,105 @@ public class DecreasingCounter {
             counter.decrement();
             counter.printValue();
         }
+    }
+}
+
+/* Create the class Debt that has double-typed instance variables of balance and interestRate. 
+The balance and the interest rate are passed to the constructor as parameters public Debt(double initialBalance, double initialInterestRate).
+In addition, create the methods public void printBalance() and public void waitOneYear() for the class. 
+The method printBalance prints the current balance, and the waitOneYear method grows the debt amount.
+The debt is increased by multiplying the balance by the interest rate.*/
+
+public class Debt {
+    private double balance;
+    private double interestRate;
+
+    public Debt(double initialBalance, double initialInterestRate){
+        this.balance = initialBalance;
+        this.interestRate = initialInterestRate;
+    }
+
+    public void printBalance() {
+        System.out.println("The current balance is: " + this.balance);
+    }
+
+    public void waitOneYear() {
+        this.balance *= this.interestRate;
+    }
+}
+
+    public class MainProgram {
+        public static void main(String[] args) {
+    
+            Debt mortgage = new Debt(120000.0, 1.01);
+            mortgage.printBalance();
+    
+            mortgage.waitOneYear();
+            mortgage.printBalance();
+    
+            int years = 0;
+    
+            while (years < 20) {
+                mortgage.waitOneYear();
+                years = years + 1;
+            }
+    
+            mortgage.printBalance();
+        }
+    }
+}
+
+/*
+Create a class called Song. 
+The song has the instance variables name (string) and length in seconds (integer). 
+Both are set in the public Song(String name, int length) constructor. 
+Also, add to the object the methods public String name(), which returns the name of the song, and public int length(), which returns the length of the song.
+ */
+
+public class Song {
+    private String name;
+    private int length;
+
+    public Song(String name, int length) {
+        this.name = name;
+        this.length = length;
+    }
+
+    public String name() {
+        return this.name;
+    }
+
+    public int length() {
+        return this.length;
+    }
+}
+
+    public class MainProgram {
+        public static void main(String[] args) {
+            Song garden = new Song("In The Garden", 10910);
+            System.out.println("The song " + garden.name() + " has a length of " + garden.length() + " seconds.");
+        }
+    }
+
+/*
+Create a film class with the instance variables name (String) and ageRating (int). 
+Write the constructor public Film(String filmName, int filmAgeRating) for the class, and also the methods public String name() and public int ageRating(). 
+The first of these returns the film title and the second returns its rating.
+ */
+public class Film {
+    private String name;
+    private int ageRating;
+
+    public Film(String filmName, int filmAgeRating) {
+        this.name = filmName;
+        this.ageRating = filmAgeRating;
+    }
+
+    public String name() {
+        return this.name;
+    }
+
+    public int ageRating() {
+        return this.ageRating;
     }
 }
