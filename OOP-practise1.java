@@ -1,5 +1,4 @@
 /*Write a program that:
-
 Creates an account named "Matthews account" with the balance 1000
 Creates an account named "My account" with the balance 0
 Withdraws 100.0 from Matthew's account
