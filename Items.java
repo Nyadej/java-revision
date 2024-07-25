@@ -6,13 +6,12 @@ Having read all the names, print all the items by using the toString method of t
 The implementation of the Item class keeps track of the time of creation, in addition to the name of the item.
  */
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Items {
 
     public static void main(String[] args) {
-   
-
-import java.util.ArrayList;
-import java.util.Scanner;
 
        ArrayList<Item> items = new ArrayList<>();
 
