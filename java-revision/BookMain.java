@@ -4,4 +4,3 @@ public class BookMain {
             System.out.println(book);
         }
     }
-
