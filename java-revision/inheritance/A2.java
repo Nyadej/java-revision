@@ -1,18 +1,17 @@
-public class A {
-
+public class A2 {
     public void a() {
         System.out.println("A");
     }
 }
 
-public class B {
+public class B extends A{
 
     public void b() {
         System.out.println("B");
     }
 }
 
-public class C {
+public class C extends B {
 
     public void c() {
         System.out.println("C");
@@ -21,15 +20,9 @@ public class C {
 
 public class Main {
     public static void main(String[] args) {
-        A aInstance = new A();
-        aInstance.a(); // Prints "A"
-
-        B bInstance = new B();
-        bInstance.b(); // Prints "B"
-
-        C cInstance = new C();
-        cInstance.c(); // Prints "C"
+        C c = new C();
+        c.a(); // Inherited from A, prints "A"
+        c.b(); // Inherited from B, prints "B"
+        c.c(); // Defined in C, prints "C"
     }
 }
-
-
